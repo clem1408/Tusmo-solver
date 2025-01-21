@@ -78,7 +78,7 @@ public:
 int main() {
   vector<Tusmo> tusmos;
 
-  ifstream file("french_set/lst_mots(336531).txt");
+  ifstream file("french_set/lst_mots.txt");
 
   if (file) {
     string line;
