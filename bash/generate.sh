@@ -37,5 +37,5 @@ if [ $? -ne 0 ]; then
     echo "Make clean failed!"
     exit 1
 fi
-  
+
 echo "Script finished successfully!"
