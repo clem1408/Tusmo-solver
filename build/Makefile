@@ -117,41 +117,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named generate
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
+generate: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 generate
+.PHONY : generate
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
+generate/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generate.dir/build.make CMakeFiles/generate.dir/build
+.PHONY : generate/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+src/generate.o: src/generate.cpp.o
+.PHONY : src/generate.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/generate.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generate.dir/build.make CMakeFiles/generate.dir/src/generate.cpp.o
+.PHONY : src/generate.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+src/generate.i: src/generate.cpp.i
+.PHONY : src/generate.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/generate.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generate.dir/build.make CMakeFiles/generate.dir/src/generate.cpp.i
+.PHONY : src/generate.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+src/generate.s: src/generate.cpp.s
+.PHONY : src/generate.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/generate.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generate.dir/build.make CMakeFiles/generate.dir/src/generate.cpp.s
+.PHONY : src/generate.cpp.s
 
 # Help Target
 help:
@@ -161,10 +161,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... main"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... generate"
+	@echo "... src/generate.o"
+	@echo "... src/generate.i"
+	@echo "... src/generate.s"
 .PHONY : help
 
 

@@ -1,18 +1,27 @@
-# Minimum version de CMake
-cmake_minimum_required(VERSION 3.12)
+# CMake minimum version
+cmake_minimum_required(VERSION 3.10)
 
-# Nom du projet
-project(TusmoSolver)
+# Project name and language
+project(Tusmo-solver LANGUAGES CXX)
 
-# Définir le standard C++ (C++23 dans ce cas)
+# Set C++ standard
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Ajouter des options de compilation (optimisation avec -Ofast)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Ofast")
+# Set source file
+set(SOURCE_FILE ${CMAKE_SOURCE_DIR}/src/generate.cpp)
 
-# Ajouter l'exécutable
-add_executable(main main.cpp)
+# Include directories
+include_directories(${CMAKE_SOURCE_DIR}/french_set)
 
-# Ajouter le répertoire data comme ressource
-configure_file(${CMAKE_SOURCE_DIR}/french_set/lst_mots.txt ${CMAKE_BINARY_DIR}/french_set/lst_mots.txt COPYONLY)
+# Output directory for the executable
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
+
+# Add executable
+add_executable(generate ${SOURCE_FILE})
+
+# Ensure /french_set/ is accessible at runtime
+configure_file(${CMAKE_SOURCE_DIR}/french_set/lst_mots.txt ${CMAKE_BINARY_DIR}/database.txt COPYONLY)
+
+# Print a message to indicate build setup completion
+message(STATUS "Build setup complete. The executable will be in the /build directory.")
