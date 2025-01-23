@@ -7,7 +7,6 @@
     <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
     <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
-    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexRemoved" />
   </component>
   <component name="CMakePresetLoader">{
   &quot;useNewFormat&quot;: true
@@ -28,7 +27,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="875b6c55-54a7-4ead-b61a-5de0ea5df2fc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/bash/generate.sh" beforeDir="false" afterPath="$PROJECT_DIR$/bash/generate.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/generate.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/generate.dir/compiler_depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/generate.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,13 +78,6 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -93,7 +86,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1737550702893</updated>
-      <workItem from="1737550704446" duration="7604000" />
+      <workItem from="1737550704446" duration="8201000" />
+      <workItem from="1737619551729" duration="1876000" />
+      <workItem from="1737621460113" duration="35000" />
     </task>
     <servers />
   </component>
