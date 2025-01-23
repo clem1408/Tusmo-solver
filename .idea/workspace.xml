@@ -7,6 +7,7 @@
     <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
     <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexRemoved" />
   </component>
   <component name="CMakePresetLoader">{
   &quot;useNewFormat&quot;: true
@@ -27,7 +28,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="875b6c55-54a7-4ead-b61a-5de0ea5df2fc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/generate.dir/compiler_depend.internal" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/CMakeFiles/generate.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/generate.dir/compiler_depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/generate.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate.cpp" afterDir="false" />
     </list>
@@ -89,6 +92,7 @@
       <workItem from="1737550704446" duration="8201000" />
       <workItem from="1737619551729" duration="1876000" />
       <workItem from="1737621460113" duration="35000" />
+      <workItem from="1737637233930" duration="5520000" />
     </task>
     <servers />
   </component>

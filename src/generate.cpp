@@ -21,7 +21,7 @@ using namespace std;
 
 
 //
-// Occurency array and alphabet array
+// Occurency array and alphabet array and pertinent array
 //
 
 constexpr array<tuple<float, int>, 26> frequencyTable =
@@ -145,7 +145,7 @@ public:
 // Function to comput pertinent words
 //
 
-void computePertinentWords(vector<Tusmo> &tusmos)
+vector<vector<Tusmo>> computePertinentWords(vector<Tusmo> &tusmos, array<array<Tusmo, 26>, 25> &pertinentTusmos)
 {
 
   // Declaration of the vector that  will contain all the words for each
@@ -167,11 +167,6 @@ void computePertinentWords(vector<Tusmo> &tusmos)
     else
       tusmoVectors[tusmo.getWord().size() - 1].push_back(tusmo);
   }
-
-  // Creating a vector for the most pertinent words of the 330k words
-  // (ie : those with the highest score)
-
-  array<array<Tusmo, 26>, 25> pertinentTusmos;
 
   // For every size of words
 
@@ -229,13 +224,15 @@ void computePertinentWords(vector<Tusmo> &tusmos)
   // Printing every words in the
   // pertinent words list
 
-  for (auto& row : pertinentTusmos) {
+  /*for (auto& row : pertinentTusmos) {
     for (auto& tusmo : row) {
       if (tusmo.getWord().size() > 0)
         cout << tusmo.getWord() << endl;
     }
     cout << endl << endl;
-  }
+  }*/
+
+  return tusmoVectors;
 }
 
 
@@ -278,9 +275,63 @@ int main() {
     return EXIT_FAILURE;
   }
 
+  // Creating a vector for the most pertinent words of the 330k words
+  // (ie : those with the highest score)
+
+  array<array<Tusmo, 26>, 25> pertinentTusmos;
+
   // Call to the computePertinentWords function
 
-  computePertinentWords(tusmos);
+  vector<vector<Tusmo>> tusmoVectors = computePertinentWords(tusmos, pertinentTusmos);
+
+  // Preparing variables for user interact loop
+
+  int choice;
+  string pattern;
+  char firstLetter;
+  vector<Tusmo> filteringTusmos;
+
+  cout << "Enter the first letter of the pattern: ";
+  cin >> firstLetter;
+
+  cout << "Enter the size of the word: ";
+  cin >> choice;
+
+  for (auto tusmo : tusmoVectors[choice - 1])
+  {
+    if (firstLetter == tusmo.getFirstChar())
+    {
+      filteringTusmos.push_back(tusmo);
+    }
+  }
+
+  Tusmo mostPertinentTusmo;
+
+  for (auto tusmo : pertinentTusmos[choice - 1])
+  {
+    if (firstLetter == tusmo.getFirstChar())
+    {
+      mostPertinentTusmo = tusmo;
+    }
+  }
+
+  cout << "Most pertinent word: " << endl;
+  mostPertinentTusmo.display();
+
+  while (true) {
+    cout << "Enter 1 to write a pattern and 2 to quit the program: ";
+    cin >> choice;
+
+    if (choice == 1) {
+      cout << "Enter a pattern: ";
+      cin >> pattern;
+    } else if (choice == 2) {
+      cout << "You choose to exit the program, bye! " << endl;
+      break;
+    } else {
+      cout << "Invalid choice, please input 1 or 2! " << endl;
+    }
+  }
 
   return EXIT_SUCCESS;
 }
